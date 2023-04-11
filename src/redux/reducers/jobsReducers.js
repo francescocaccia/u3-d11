@@ -1,4 +1,4 @@
-import { FETCH_RESULT } from "../actions";
+import { SET_JOBS } from "../actions";
 
 const initialState = {
   content: [],
@@ -6,7 +6,8 @@ const initialState = {
 
 const jobsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_RESULT:
+    case SET_JOBS:
+      console.log(action);
       return {
         ...state,
         content: action.payload,
